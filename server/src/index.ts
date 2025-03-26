@@ -3,7 +3,13 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import helmet from 'helmet';
-import morgan from "morgan";
+import morgan from 'morgan';
+
+
+// Import Routes 
+
+import dashboardRoutes from './routes/dashboardRouts';
+
 
 // Configurations
 
@@ -18,11 +24,12 @@ app.use(morgan('common'));
 app.use(express.json());
 
 // Routes 
+app.use("/dashboard", dashboardRoutes);
 
 
 // Server 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
