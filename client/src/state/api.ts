@@ -48,10 +48,10 @@ export interface Product {
 
 export interface DashboardMetrics {
     popularProducts: Product[];
-    SalesSummary: SalesSummary[];
-    PurchaseSummary: PurchaseSummary[];
-    ExpenseSummary: ExpenseSummary[];
-    ExpenseByCategorySummary: ExpenseByCategorySummary[];
+    salesSummary: SalesSummary[];
+    purchaseSummary: PurchaseSummary[];
+    expenseSummary: ExpenseSummary[];
+    expenseByCategorySummary: ExpenseByCategorySummary[];
 }
 
 export const api = createApi({
